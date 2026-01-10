@@ -1,53 +1,36 @@
-interface NavigationProps {
-  currentPage: string;
-  onNavigate: (page: string) => void;
-}
+import { NavLink } from 'react-router-dom';
 
-export function Navigation({ currentPage, onNavigate }: NavigationProps) {
+export function Navigation() {
+  const linkClasses = (isActive: boolean) =>
+    `transition-colors relative pb-1 ${
+      isActive
+        ? 'text-[var(--color-text-primary)]'
+        : 'text-[var(--color-text-secondary)] hover:text-[var(--color-navy)]'
+    } after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--color-navy)] after:transition-all after:duration-300 hover:after:w-full ${
+      isActive ? 'after:w-full' : ''
+    }`;
+
   return (
     <header className="border-b border-[var(--color-border)] bg-white">
       <div className="max-w-7xl mx-auto px-8 py-5">
         <div className="flex items-center justify-between">
-          <div 
-            className="flex items-center cursor-pointer"
-            onClick={() => onNavigate('home')}
-          >
-            <h3 className="text-[var(--color-navy)]">
-              Investment Research
-            </h3>
-          </div>
-          
+          <NavLink to="/" end className="flex items-center text-[var(--color-navy)]">
+            <h3>Investment Research</h3>
+          </NavLink>
+
           <nav className="flex items-center gap-10">
-            <button 
-              onClick={() => onNavigate('home')}
-              className={`transition-colors ${
-                currentPage === 'home'
-                  ? 'text-[var(--color-text-primary)]'
-                  : 'text-[var(--color-text-secondary)] hover:text-[var(--color-navy)]'
-              }`}
-            >
+            <NavLink to="/" end className={({ isActive }) => linkClasses(isActive)}>
               Home
-            </button>
-            <button 
-              onClick={() => onNavigate('market-outlook')}
-              className={`transition-colors ${
-                currentPage === 'market-outlook'
-                  ? 'text-[var(--color-text-primary)]'
-                  : 'text-[var(--color-text-secondary)] hover:text-[var(--color-navy)]'
-              }`}
+            </NavLink>
+            <NavLink
+              to="/market-outlook"
+              className={({ isActive }) => linkClasses(isActive)}
             >
               Market Outlook
-            </button>
-            <button 
-              onClick={() => onNavigate('about')}
-              className={`transition-colors ${
-                currentPage === 'about'
-                  ? 'text-[var(--color-text-primary)]'
-                  : 'text-[var(--color-text-secondary)] hover:text-[var(--color-navy)]'
-              }`}
-            >
+            </NavLink>
+            <NavLink to="/about" className={({ isActive }) => linkClasses(isActive)}>
               About Me
-            </button>
+            </NavLink>
           </nav>
         </div>
       </div>

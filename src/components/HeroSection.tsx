@@ -11,14 +11,14 @@ export function HeroSection() {
             Rigorous, independent market insights and company analysis to help you think clearly about investing. No hype, no shortcuts—just disciplined research and long-term perspective.
           </p>
           
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             <button className="px-7 py-3.5 bg-[var(--color-navy)] text-white hover:bg-[var(--color-charcoal)] transition-colors">
               Read the Latest Market Outlook
             </button>
             <button className="px-7 py-3.5 border-2 border-[var(--color-navy)] text-[var(--color-navy)] hover:bg-[var(--color-bg-subtle)] transition-colors">
               Subscribe
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
