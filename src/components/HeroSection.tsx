@@ -4,10 +4,9 @@ export function HeroSection() {
       <div className="max-w-5xl mx-auto px-8 py-24">
         <div className="max-w-3xl">
           <h1 className="mb-6">
-            Independent Research for 
-            Long-Term Investors
+            Alpha Market Notes
           </h1>
-          <p className="text-xl mb-10 text-[var(--color-text-secondary)] leading-relaxed">
+          <p className="text-xl text-[var(--color-text-secondary)] leading-relaxed">
             Rigorous, independent market insights and company analysis to help you think clearly about investing. No hype, no shortcuts—just disciplined research and long-term perspective.
           </p>
           

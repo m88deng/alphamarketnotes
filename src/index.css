@@ -174,7 +174,6 @@
   }
 
   img, svg, video, canvas, audio, iframe, embed, object {
-    vertical-align: middle;
     display: block;
   }
 
@@ -993,4 +992,32 @@ a {
   syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
+}
+
+.article-content h3 {
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+.article-content p {
+  margin-bottom: 1.25rem;
+}
+
+.article-content ul {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+}
+
+.article-content p + ul {
+  margin-top: 0.75rem;
+}
+
+.article-content h3:first-child {
+  margin-top: 0.25rem;
 }

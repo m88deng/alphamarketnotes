@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
 import { outlookPosts } from '../data/marketOutlookPosts';
 import { extractIdFromSlug } from '../utils/slugify';
 
@@ -19,25 +18,12 @@ export function MarketOutlookPostPage() {
   }
 
   return (
-    <div className="bg-[var(--color-bg-subtle)] min-h-screen">
-      {/* Back Navigation */}
-      <section className="bg-white border-b border-[var(--color-border)]">
-        <div className="max-w-4xl mx-auto px-8 py-6">
-          <Link 
-            to="/market-outlook"
-            className="inline-flex items-center gap-2 text-[var(--color-text-secondary)] hover:text-[var(--color-navy)] transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Market Outlook
-          </Link>
-        </div>
-      </section>
-
+    <div className="max-w-5xl mx-auto px-8 min-h-screen">
       {/* Article Header */}
-      <article className="bg-white">
-        <div className="max-w-4xl mx-auto px-8 py-16">
+      <article>
+        <div className="max-w-4xl mx-auto px-8 py-16 mb-12">
           {/* Category & Meta */}
-          <div className="flex items-center gap-4 text-sm text-[var(--color-text-muted)] mb-6">
+          <div className="flex items-center gap-4 text-sm text-[var(--color-text-muted)] mb-8">
             <span className="text-[var(--color-accent)] font-medium">{post.category}</span>
             <span>•</span>
             <span>{post.date}</span>
@@ -46,16 +32,16 @@ export function MarketOutlookPostPage() {
           </div>
 
           {/* Title */}
-          <h1 className="mb-6">{post.title}</h1>
+          <h1 className="mb-12">{post.title}</h1>
 
-          {/* Excerpt */}
-          <p className="text-xl text-[var(--color-text-secondary)] leading-relaxed border-l-4 border-[var(--color-navy)] pl-6 mb-12">
+          {/* Excerpt
+          <p className="text-xl text-[var(--color-text-secondary)] leading-relaxed border-l-4 border-[var(--color-navy)] pl-6 mb-8">
             {post.excerpt}
-          </p>
+          </p> */}
 
           {/* Article Content */}
           <div 
-            className="prose prose-lg max-w-none
+            className="article-content prose prose-lg max-w-none
               prose-headings:text-[var(--color-charcoal)] 
               prose-h3:text-2xl prose-h3:font-semibold prose-h3:mt-12 prose-h3:mb-4
               prose-p:text-[var(--color-text-secondary)] prose-p:leading-relaxed prose-p:mb-6
@@ -68,9 +54,9 @@ export function MarketOutlookPostPage() {
       </article>
 
       {/* Related Posts Section (Optional) */}
-      <section className="py-12">
-        <div className="max-w-4xl mx-auto px-8">
-          <h3 className="text-2xl font-semibold mb-6">More from Market Outlook</h3>
+      {/* <section className="py-12">
+        <div className="border-t border-[var(--color-border)] max-w-4xl mx-auto px-8 py-12">
+          <h2 className="text-2xl font-semibold mb-6">More from Market Outlook</h2>
           <div className="grid gap-6">
             {outlookPosts
               .filter(p => p.id !== post.id)
@@ -87,25 +73,27 @@ export function MarketOutlookPostPage() {
                   <Link
                     key={relatedPost.id}
                     to={`/market-outlook/${relatedSlug}-${relatedPost.id}`}
-                    className="bg-white border border-[var(--color-border)] p-6 hover:shadow-md transition-shadow block"
+                    className="border-b border-[var(--color-border)] my-6 p-6 hover:shadow-md transition-shadow block"
                   >
-                    <div className="flex items-center gap-3 text-sm text-[var(--color-text-muted)] mb-3">
-                      <span className="text-[var(--color-accent)]">{relatedPost.category}</span>
-                      <span>•</span>
-                      <span>{relatedPost.date}</span>
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2 text-[var(--color-charcoal)]">
-                      {relatedPost.title}
-                    </h3>
-                    <p className="text-[var(--color-text-secondary)] line-clamp-2">
-                      {relatedPost.excerpt}
-                    </p>
+                    <>
+                      <div className="flex items-center gap-3 text-sm text-[var(--color-text-muted)] pt-6 mb-3">
+                        <span className="text-[var(--color-accent)]">{relatedPost.category}</span>
+                        <span>•</span>
+                        <span>{relatedPost.date}</span>
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2 text-[var(--color-charcoal)]">
+                        {relatedPost.title}
+                      </h3>
+                      <p className="text-[var(--color-text-secondary)] line-clamp-2">
+                        {relatedPost.excerpt}
+                      </p>
+                    </>
                   </Link>
                 );
               })}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

@@ -15,7 +15,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-8 py-5">
         <div className="flex items-center justify-between">
           <NavLink to="/" end className="flex items-center text-[var(--color-navy)]">
-            <h3>Investment Research</h3>
+            <h3>Alpha Market Notes</h3>
           </NavLink>
 
           <nav className="flex items-center gap-10">
