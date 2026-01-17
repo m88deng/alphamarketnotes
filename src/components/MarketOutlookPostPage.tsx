@@ -52,6 +52,16 @@ export function MarketOutlookPostPage() {
               prose-strong:text-[var(--color-charcoal)] prose-strong:font-semibold"
             dangerouslySetInnerHTML={{ __html: post.content || '' }}
           />
+
+          {/* Sources Section */}
+          {post.sources && post.sources.length > 0 && (
+            <div className="mt-16 pt-8 py-16">
+              <h3 className="text-xl font-semibold mb-4">Sources</h3>
+              {post.sources.map((source, index) => (
+                <p className='mb-3' key={index}>{source}</p>
+              ))}
+            </div>
+          )}
         </div>
       </article>
 
