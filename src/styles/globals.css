@@ -104,3 +104,9 @@ a {
 .article-content a:hover {
   color: var(--color-navy);
 }
+
+.overflow-wrap-anywhere {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+}

@@ -56,9 +56,16 @@ export function MarketOutlookPostPage() {
           {post.sources && post.sources.length > 0 && (
             <div className="mt-16 pt-8 py-16">
               <h3 className="text-xl font-semibold mb-4">Sources</h3>
-              {post.sources.map((source, index) => (
-                <p className='mb-3' key={index}>{source}</p>
-              ))}
+              <div className="space-y-3">
+                {post.sources.map((source, index) => (
+                  <p 
+                    key={index}
+                    className="text-sm text-[var(--color-text-secondary)] break-words overflow-wrap-anywhere"
+                  >
+                    {source}
+                  </p>
+                ))}
+              </div>
             </div>
           )}
         </div>

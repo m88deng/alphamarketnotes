@@ -23,14 +23,14 @@ export function Navigation() {
             <NavLink to="/" end className={({ isActive }) => linkClasses(isActive)}>
               Home
             </NavLink>
-            <NavLink
-              to="/market-outlook"
-              className={({ isActive }) => linkClasses(isActive)}
-            >
+            <NavLink to="/market-outlook" className={({ isActive }) => linkClasses(isActive)}>
               Market Outlook
             </NavLink>
             <NavLink to="/about" className={({ isActive }) => linkClasses(isActive)}>
               About Me
+            </NavLink>
+            <NavLink to="/contact" className={({ isActive }) => linkClasses(isActive)}>
+              Contact
             </NavLink>
           </nav>
         </div>
