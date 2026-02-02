@@ -7,6 +7,7 @@ import { AboutMePage } from './components/AboutMePage';
 import { ContactPage } from './components/ContactPage';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
+import { Toaster } from './components/ui/sonner';
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <Toaster />
     </BrowserRouter>
   );
 }

@@ -1,16 +1,16 @@
 import { useState, type FormEvent } from 'react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Label } from './ui/label';
-import { Textarea } from './ui/textarea';
 import { toast } from 'sonner';
+import emailjs from '@emailjs/browser';
+
+// EmailJS Configuration - loaded from environment variables
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export function ContactPage() {
-  // Keeping your state logic intact
   const [formData, setFormData] = useState({
+    fullName: '',
     email: '',
-    firstName: '',
-    lastName: '',
     title: '',
     message: ''
   });
@@ -19,25 +19,55 @@ export function ContactPage() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // Your submit logic here
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast.success('Message sent!');
-    }, 1000);
-  };
+    
+    try {
+      // Send email using EmailJS
+      // These field names must match your EmailJS template variables
+      const templateParams = {
+        name: formData.fullName,
+        email: formData.email,
+        title: formData.title,
+        message: formData.message,
+      };
 
-  const inputClasses = "w-full bg-[var(--color-bg-subtle)] border border-[var(--color-border)] rounded-md px-4 py-3 text-[var(--color-charcoal)] placeholder:text-gray-400 focus:bg-white focus:border-[var(--color-navy)] focus:ring-1 focus:ring-[var(--color-navy)] outline-none transition-all duration-200";
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      // Success!
+      toast.success('Message sent successfully!', {
+        description: 'We\'ll get back to you as soon as possible.',
+      });
+      
+      // Reset form
+      setFormData({
+        fullName: '',
+        email: '',
+        title: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      toast.error('Failed to send message', {
+        description: 'Please try again or contact us directly at contact@cdeng.com.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 border-b border-[var(--color-border)] bg-[var(--color-bg-subtle)]">
+      <section className="py-16 bg-[var(--color-bg-subtle)] border-b border-[var(--color-border)]">
         <div className="max-w-5xl mx-auto px-8">
-          <h1 className="mb-6">Get in Touch</h1>
-          <p className="text-xl leading-relaxed text-[var(--color-text-secondary)]">
-            Have questions about our research or interested in learning more? 
-            We'd love to hear from you.
+          <h1 className="text-5xl font-bold text-[var(--color-navy)] mb-4">Get in Touch</h1>
+          <p className="text-xl text-[var(--color-text-secondary)] leading-relaxed">
+            Have questions about our research or interested in learning more? We'd love to hear from you.
           </p>
         </div>
       </section>
@@ -45,97 +75,95 @@ export function ContactPage() {
       {/* Contact Form */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-8">
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form onSubmit={handleSubmit} className="space-y-10">
             
-            {/* Email */}
-            <div className="space-y-2">
-              <Label htmlFor="email" className="text-[var(--color-charcoal)] font-medium">
-                Email Address <span className="text-red-600">*</span>
-              </Label>
-              <Input
-                id="email"
-                type="email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                placeholder="your.email@example.com"
-                required
-                className={inputClasses}
-              />
-            </div>
-
-            {/* First Name and Last Name */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <Label htmlFor="firstName" className="text-[var(--color-charcoal)] font-medium">
-                  First Name <span className="text-red-600">*</span>
-                </Label>
-                <Input
-                  id="firstName"
+            {/* Row 1: Name and Email */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <label htmlFor="fullName" className="block text-sm font-semibold text-[var(--color-charcoal)] mb-3 uppercase tracking-wide">
+                  Your Name
+                </label>
+                <input
+                  id="fullName"
                   type="text"
-                  value={formData.firstName}
-                  onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                  placeholder="John"
+                  value={formData.fullName}
+                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                  placeholder="Full name"
                   required
-                  className={inputClasses}
+                  className="w-full bg-[var(--color-bg-subtle)] border border-[var(--color-border)] rounded px-5 py-4 text-[var(--color-charcoal)] placeholder:text-gray-400 focus:bg-white focus:border-[var(--color-navy)] focus:ring-2 focus:ring-[var(--color-navy)] focus:ring-opacity-20 outline-none transition-all"
                 />
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="lastName" className="text-[var(--color-charcoal)] font-medium">
-                  Last Name <span className="text-red-600">*</span>
-                </Label>
-                <Input
-                  id="lastName"
-                  type="text"
-                  value={formData.lastName}
-                  onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                  placeholder="Doe"
+              <div>
+                <label htmlFor="email" className="block text-sm font-semibold text-[var(--color-charcoal)] mb-3 uppercase tracking-wide">
+                  Your Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  placeholder="name@email.com"
                   required
-                  className={inputClasses}
+                  className="w-full bg-[var(--color-bg-subtle)] border border-[var(--color-border)] rounded px-5 py-4 text-[var(--color-charcoal)] placeholder:text-gray-400 focus:bg-white focus:border-[var(--color-navy)] focus:ring-2 focus:ring-[var(--color-navy)] focus:ring-opacity-20 outline-none transition-all"
                 />
               </div>
             </div>
 
-            {/* Title */}
-            <div className="space-y-2">
-              <Label htmlFor="title" className="text-[var(--color-charcoal)] font-medium">
-                Title / Organization
-              </Label>
-              <Input
-                id="title"
+            {/* Row 3: Subject */}
+            <div>
+              <label htmlFor="subject" className="block text-sm font-semibold text-[var(--color-charcoal)] mb-3 uppercase tracking-wide">
+                Reason For Contacting
+              </label>
+              <input
+                id="subject"
                 type="text"
                 value={formData.title}
                 onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                placeholder="Portfolio Manager, Example Capital"
-                className={inputClasses}
+                placeholder="Enter subject here"
+                required
+                className="w-full bg-[var(--color-bg-subtle)] border border-[var(--color-border)] rounded px-5 py-4 text-[var(--color-charcoal)] placeholder:text-gray-400 focus:bg-white focus:border-[var(--color-navy)] focus:ring-2 focus:ring-[var(--color-navy)] focus:ring-opacity-20 outline-none transition-all"
               />
             </div>
 
-            {/* Message */}
-            <div className="space-y-2">
-              <Label htmlFor="message" className="text-[var(--color-charcoal)] font-medium">
-                Message <span className="text-red-600">*</span>
-              </Label>
-              <Textarea
+            {/* Row 4: Message */}
+            <div>
+              <label htmlFor="message" className="block text-sm font-semibold text-[var(--color-charcoal)] mb-3 uppercase tracking-wide">
+                Message
+              </label>
+              <textarea
                 id="message"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                placeholder="Please share your inquiry or let us know how we can help..."
+                placeholder="Your message here"
                 required
-                rows={6}
-                className={`${inputClasses} resize-none min-h-[160px]`}
+                rows={7}
+                className="w-full bg-[var(--color-bg-subtle)] border border-[var(--color-border)] rounded px-5 py-4 text-[var(--color-charcoal)] placeholder:text-gray-400 focus:bg-white focus:border-[var(--color-navy)] focus:ring-2 focus:ring-[var(--color-navy)] focus:ring-opacity-20 outline-none transition-all resize-none"
               />
             </div>
 
+            {/* reCAPTCHA Notice */}
+            <div className="text-sm text-[var(--color-text-muted)] pt-2">
+              This site is protected by reCAPTCHA and the Google{' '}
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[var(--color-navy)] hover:underline">
+                Privacy Policy
+              </a>{' '}
+              and{' '}
+              <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="text-[var(--color-navy)] hover:underline">
+                Terms of Service
+              </a>{' '}
+              apply.
+            </div>
+
             {/* Submit Button */}
-            <div className="pt-4">
-              <Button
+            <div className="pt-6">
+              <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-[var(--color-navy)] hover:bg-[var(--color-charcoal)] text-white px-8 py-4 rounded-md transition-colors w-full md:w-auto font-medium"
+                className="bg-[var(--color-navy)] text-white px-10 py-4 rounded font-semibold hover:bg-[var(--color-charcoal)] transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md"
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </Button>
+                {isSubmitting ? 'Sending...' : 'Submit'}
+              </button>
             </div>
           </form>
         </div>

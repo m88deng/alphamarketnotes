@@ -30,25 +30,3 @@ export { AboutMePage } from './AboutMePage';
 export { HeroSection } from './HeroSection';
 export { FeaturedContent } from './FeaturedContent';
 export { AboutSnapshot } from './AboutSnapshot';
-
-// Note: UI components from ./ui/ folder are typically imported directly
-// since they're from a component library (shadcn/ui)
-
-/**
- * Usage examples:
- * 
- * ```tsx
- * import { Navigation, Footer, HomePage } from '@/components';
- * 
- * export default function App() {
- *   return (
- *     <>
- *       <Navigation />
- *       <HomePage />
- *       <Footer />
- *     </>
- *   );
- * }
- * ```
- */
-
