@@ -378,7 +378,15 @@ export const outlookPosts: OutlookPost[] = [
 
 	],
     content: `
-      <h3>Federal Reserve Holds Rates Steady</h3>
+	<table style="border-collapse:collapse;width:100%;text-align:center;font-family:Arial,sans-serif;">
+			<tr>
+				<td style="padding:8px 16px;border:none;font-size:14px;">SPY 0.2%</td>
+				<td style="padding:8px 16px;border:none;font-size:14px;">QQQ -0.22%</td>
+				<td style="padding:8px 16px;border:none;font-size:14px;">IWM -2.07%</td>
+			</tr>
+	</table>
+
+	<h3>Federal Reserve Holds Rates Steady</h3>
 		<p>On Wednesday, the Federal Reserve held its key interest rate steady, keeping the federal funds rate at 3.50%–3.75%, rather than cutting again, as inflation remains above target and economic growth has stayed solid. Markets reacted with a muted move in stocks and bonds, as traders had largely priced in the pause and focused on the Fed’s cautious messaging about future cuts.</p>
 	<h3>Gold and Silver Pull Back After Record Gains</h3>
 		<p>After months of record-breaking gains in gold and silver—both metals surging sharply higher earlier in January—the recent selloff was widely seen as almost inevitable once prices became extremely overextended. According to Kitco, gold and silver had risen so fast that profit-taking and a reversal in trader positioning made a sharp correction likely, even though the longer-term bullish trend remains intact. Pullbacks like this often occur after parabolic rallies, especially when markets reassess expectations around monetary policy and the U.S. dollar.</p>
@@ -390,6 +398,52 @@ export const outlookPosts: OutlookPost[] = [
 		<p>Apple beat Wall Street estimates with $143.8 billion in revenue, driven by record-setting iPhone sales that reached $85.3 billion, up about 23% year over year, along with strong results across services and international markets. CEO Tim Cook described iPhone demand as “staggering.” Apple maintained a healthy gross margin of around 48.2% while projecting continued double-digit revenue growth in the upcoming quarter. Rising memory chip costs, however, could put some pressure on margins going forward.</p>
 	<h3>SanDisk Capitalizes on AI-Driven Memory Demand</h3>
 		<p>SanDisk has been a standout in the memory and storage sector, as AI-driven demand tightens supply and lifts pricing power for NAND flash and enterprise storage—the type of memory increasingly prioritized by data centers building AI infrastructure. Its shares rallied sharply after projecting third-quarter profit and revenue well above analysts’ estimates, reflecting robust demand tied to AI workloads and constrained supply for high-capacity storage products. Morningstar analysts expect supply constraints to endure until at least 2028, which could generate significant growth for SanDisk. Rising memory chip costs, noted by Apple, are squeezing some tech producers, but SanDisk is benefiting from strong AI-related storage demand.</p>
+    `
+  },
+  {
+    id: "19c3b07f",
+    title: "Market Recap | Week of February 2, 2026",
+    excerpt: "This week, U.S. markets were volatile, with the Dow Jones hitting a record 50,000 while tech and software stocks, including AMD and Amazon, faced sharp declines over weaker sales and AI spending concerns. Investors rotated into industrials and consumer staples for more stable returns, while gold, silver, and Bitcoin experienced swings before rebounding late in the week. Overall, the market reflected a balancing act between risk-on rebounds and caution over growth sector valuations.",
+    date: "February 7, 2026",
+    category: "Weekly Market Recap",
+    readTime: "4 min read",
+	sources:[
+		"Google. (n.d.). SPDR S&P 500 ETF Trust (spy) price & news. Google Finance. https://www.google.com/finance/quote/SPY:NYSEARCA?window=5D",
+		"Google. (n.d.-a). Invesco QQQ Trust, series 1 (QQQ) Price & News. Google Finance. https://www.google.com/finance/quote/QQQ:NASDAQ?window=5D",
+		"Google. (n.d.-b). IShares russell 2000 ETF (IWM) price & news. Google Finance. https://www.google.com/finance/quote/IWM:NYSEARCA?window=5D",
+		"AMD falls as dour forecast shows tough competition in Ai Trade | reuters. Reuters. (2026, February 4). https://www.reuters.com/business/amds-frankfurt-listed-shares-fall-after-weaker-sales-2026-02-04/",
+		"Chakravarty, K., & Soni, A. (2026, February 6). Amazon shares slide as $200 billion outlay fans fears over Ai returns | reuters. Reuters. https://www.reuters.com/business/retail-consumer/amazon-shares-sink-big-techs-ai-spending-plans-worry-investors-2026-02-06/",
+		"Chavez-Dreyfuss , G., & Cooper, A. (2026, February 6). Bitcoin rallies, tops $70,000 as risk assets stabilize | Reuters. Reuters. https://www.reuters.com/business/finance/bitcoin-cusp-60000-investors-flee-risky-bets-2026-02-06/",
+		"Gold price Today: Price of Gold Per Ounce: 24 Hour spot chart. KITCO. (n.d.-a). https://www.kitco.com/charts/gold",
+		"Krauskopf, L. (2026, February 6). Wall St Week Ahead Tech Stock Shakeout clouds market ahead of Economic Data Deluge | reuters. Reuters. https://www.reuters.com/business/wall-st-week-ahead-tech-stock-shakeout-clouds-market-ahead-economic-data-deluge-2026-02-06/",
+		"Silver price Today: Price of Silver per ounce: 24 Hour spot chart. KITCO. (n.d.-b). https://www.kitco.com/charts/silver",
+		"Singh, M., & Ahmed, S. I. (2026, February 5). US software stocks slammed on mounting fears over AI disruption, lose $1 trillion in week | reuters. Reuters. https://www.reuters.com/business/us-software-stocks-stabilize-after-bruising-selloff-ai-disruption-fears-2026-02-05/",
+	],
+    content: `
+      <table style="border-collapse:collapse;width:100%;text-align:center;font-family:Arial,sans-serif;">
+			<tr>
+				<td style="padding:8px 16px;border:none;font-size:14px;">SPY +0.15%</td>
+				<td style="padding:8px 16px;border:none;font-size:14px;">QQQ -1.52%</td>
+				<td style="padding:8px 16px;border:none;font-size:14px;">IWM +2.54%</td>
+			</tr>
+	</table>
+	<h3>Record Dow Masks Broader Market Fragility</h3>
+	<p>The headline of the week came on Friday, when the Dow Jones Industrial Average closed above 50,000 points for the first time in history, finishing the session at 50,115.67, one of its strongest gains in months. The milestone came after a short period of risk-on sentiment returned to markets, helping the benchmark index recover from earlier losses.</p>
+
+	<h3>Tech and Software Stocks Drive Midweek Selloff</h3>
+	<p>Despite the late-week rebound, equities experienced a volatile and uneven week overall, driven primarily by sharp selling pressure in technology and software stocks. Midweek, risk assets were hit hard as investors grew increasingly concerned about elevated valuations and the long-term implications of aggressive spending on artificial intelligence and infrastructure. Software stocks were among the worst performers, reflecting skepticism over near-term earnings visibility and fears that rising AI investment costs may weigh on profitability before delivering meaningful returns. Reuters noted that the selloff triggered a broader reassessment of leadership within U.S. equities, as markets digested what it described as a “tech stock shakeout”.</p>
+
+	<h3>Earnings Reactions at AMD and Amazon Amplify AI Spending Concerns</h3>
+	<p>High-profile earnings reactions reinforced those concerns. Advanced Micro Devices fell sharply after issuing a weaker-than-expected sales outlook, with investors focusing on signs that growth in its data-center business may be struggling to keep pace with expectations in the highly competitive AI chip market. Amazon shares also sank after the company outlined massive capital spending plans tied to AI and cloud infrastructure, raising fears that the scale of those investments could pressure margins and free cash flow. Together, the declines in AMD and Amazon weighed heavily on broader technology benchmarks and amplified investor caution toward growth-oriented names.</p>
+
+	<h3>Investors Rotate Toward Industrials and Consumer Staples</h3>
+	<p>At the same time, Reuters reported evidence of a sector rotation, as investors moved capital away from technology and into industrials and consumer staples, which were viewed as offering more predictable earnings and defensive characteristics amid uncertainty. This shift in positioning helped explain why the Dow — which has heavier exposure to industrial and defensive stocks — outperformed the tech-heavy Nasdaq during the week, even as overall market volatility remained elevated.</p>
+
+	<h3>Precious Metals Whipsawed by Shifting Risk Sentiment.</h3>
+	<p>Outside of equities, precious metals and cryptocurrencies showed heightened volatility as markets oscillated between risk aversion and selective bargain hunting. Gold prices briefly climbed during periods of market stress, supported by demand for traditional safe havens, before surrendering some gains as broader risk appetite stabilized. Silver, which is more closely tied to industrial demand, experienced sharper swings amid the turbulence, finishing the week at 77.69, while gold ended at 4,966.</p>
+
+	<h3>Bitcoin Slides, Then Rebounds as Risk Appetite Stabilizes</h3>
+	<p>Bitcoin tumbled early in the week to levels not seen in over a year, slipping below key psychological thresholds as investors retreated from riskier assets. At its lows, the world’s largest cryptocurrency traded just above the mid-$60,000 range, down sharply from recent highs. Sentiment improved toward the end of the week, however, and Bitcoin staged a powerful rebound on Friday, surging back above $70,000, mirroring the relief rally seen across broader financial markets.</p>
     `
   }
 	// {

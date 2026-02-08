@@ -53,7 +53,7 @@ export function MarketOutlookPage() {
       <section className={layout.section.default}>
         <div className={layout.container.standard}>
           <div className="space-y-6">
-            {filteredPosts.map((post) => (
+            {[...filteredPosts].reverse().map((post) => (
               <article 
                 key={post.id}
                 className={layout.card.hoverable}
