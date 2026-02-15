@@ -102,6 +102,7 @@ export function MarketOutlookPostPage() {
                     <div className="text-xl font-semibold mb-2 text-[var(--color-charcoal)]">
                       {relatedPost.title}
                     </div>
+                    <small>{relatedPost.excerpt}</small>
                   </Link>
                   </div>
                 );

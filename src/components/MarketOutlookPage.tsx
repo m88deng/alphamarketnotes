@@ -5,7 +5,7 @@ import { layout, typography, interactive } from '@/styles';
 import { generatePostUrl } from '@/utils';
 import { outlookPosts } from '@/data';
 
-const categories = ["All", "Quarterly Review", "Strategy", "Sector Analysis"];
+const categories = ["All", "Quarterly Review", "Weekly Market Recap", "Sector Analysis"];
 
 export function MarketOutlookPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");

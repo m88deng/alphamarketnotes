@@ -445,6 +445,47 @@ export const outlookPosts: OutlookPost[] = [
 	<h3>Bitcoin Slides, Then Rebounds as Risk Appetite Stabilizes</h3>
 	<p>Bitcoin tumbled early in the week to levels not seen in over a year, slipping below key psychological thresholds as investors retreated from riskier assets. At its lows, the world’s largest cryptocurrency traded just above the mid-$60,000 range, down sharply from recent highs. Sentiment improved toward the end of the week, however, and Bitcoin staged a powerful rebound on Friday, surging back above $70,000, mirroring the relief rally seen across broader financial markets.</p>
     `
+  },
+  {
+    id: "19c5fc8e",
+    title: "Market Recap | Week of February 9, 2026",
+    excerpt: "U.S. markets reacted to mixed economic signals this week, with January nonfarm payrolls up 130,000, inflation slowing to 2.4%, and the CME FedWatch Tool showing over a 50% chance of a June rate cut. Investor worries over AI disruption drove broad tech and sector sell-offs — including Apple down 5% — while gold rebounded above $5,000 and Bitcoin remained volatile near $66,000 amid uncertainty over growth and monetary policy.",
+    date: "February 15, 2026",
+    category: "Weekly Market Recap",
+    readTime: "3 min read",
+    sources: [
+        "Google. (n.d.). SPDR S&P 500 ETF Trust (spy) price & news. Google Finance. https://www.google.com/finance/quote/SPY:NYSEARCA?window=5D",
+        "Google. (n.d.-a). Invesco QQQ Trust, series 1 (QQQ) Price & News. Google Finance. https://www.google.com/finance/quote/QQQ:NASDAQ?window=5D",
+        "Google. (n.d.-b). IShares russell 2000 ETF (IWM) price & news. Google Finance. https://www.google.com/finance/quote/IWM:NYSEARCA?window=5D",
+        "Gold price Today: Price of Gold Per Ounce: 24 Hour spot chart. KITCO. (n.d.-a). https://www.kitco.com/charts/gold",
+        "Bitcoin price Today, BTC to USD live price, marketcap and Chart. CoinMarketCap. (n.d.). https://coinmarketcap.com/currencies/bitcoin/",
+        "FedWatch. CME Group. (n.d.). https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html",
+        "Greenberg, K. (2026, February 12). Here’s why Apple’s stock dropped 5% Today. Investopedia. https://www.investopedia.com/here-s-why-apple-s-stock-dropped-5-today-aapl-11906036",
+        "Singh , M., & Shankar, S. (n.d.). From software to real estate, U.S. sectors under the grip of AI Scare Trade | reuters. Reuters. https://www.reuters.com/business/software-real-estate-us-sectors-under-grip-ai-scare-trade-2026-02-13/",
+        "Szymanski, A. (2026, February 13). Morning bid: Dancing in the dark | reuters. Reuters. https://www.reuters.com/business/finance/global-markets-view-usa-2026-02-13/",
+        "US jobs beat for January affirms Steady Fed View | reuters. Reuters. (2026a, February 11). https://www.reuters.com/business/view-us-jobs-beat-january-affirms-steady-fed-view-2026-02-11/",
+        "View cooling January inflation keeps fed easing in play | reuters. Reuters. (2026b, February 13). https://www.reuters.com/business/view-us-consumer-prices-rise-less-than-expected-january-2026-02-13/ "
+    ],
+    content: `
+        <table style="border-collapse:collapse;width:100%;text-align:center;font-family:Arial,sans-serif;">
+            <tr>
+                <td style="padding:8px 16px;border:none;font-size:14px;">SPY +0.15%</td>
+                <td style="padding:8px 16px;border:none;font-size:14px;">QQQ -1.52%</td>
+                <td style="padding:8px 16px;border:none;font-size:14px;">IWM +2.54%</td>
+            </tr>
+        </table>
+        <h3>U.S. Economic Data and Fed Expectations</h3>
+		<p>U.S. markets reacted to mixed signals from key economic releases this week. Wednesday’s delayed January employment report showed nonfarm payrolls rising 130,000, well above forecasts of roughly 70,000, while the unemployment rate edged down to 4.3%, underscoring continued labor market resilience. On Friday, the Consumer Price Index (CPI) indicated inflation moderated, with monthly prices up 0.2% and the annual rate slowing to 2.4% from 2.7%, below expectations. The combination of solid job growth and easing inflation influenced market expectations for Federal Reserve policy: the CME FedWatch Tool now shows traders pricing in more than a 50% chance of a rate cut by the June 2026 FOMC meeting.
+
+		<h3>AI Scare Trade Hits U.S. Sectors</h3>
+		<p>Wall Street stocks slid sharply as investor concerns over artificial intelligence disruption spread beyond traditional technology firms into broader sectors, sparking what traders describe as an “AI scare trade.” Initial selling in software stocks quickly extended into private credit, real estate brokers, data analytics, legal services, and insurers, as investors worried that rapid AI adoption could disrupt established business models. The S&P 500 Software & Services index has lost roughly $2 trillion in value from its peak, while major names such as Salesforce, Adobe, and CrowdStrike posted steep declines, alongside firms exposed to software loans and leverage.</p>
+
+		<h3>Apple Under Pressure</h3>
+		<p>Apple’s shares fell roughly 5% on Thursday, marking their worst session since April and erasing much of the gains posted earlier in the year. The broader tech sell-off weighed on the stock, but company-specific concerns amplified losses: the U.S. Federal Trade Commission sent a warning letter to CEO Tim Cook over Apple’s News app, and reports indicated delays in key AI upgrades, including improvements to Siri and other Apple Intelligence features. These factors pushed Apple into the red for 2026 despite strong recent revenue, as investors weighed near-term strategic challenges against longer-term growth prospects.</p>
+
+		<h3>Gold, Silver, and Crypto</h3>
+		<p>Precious metals and cryptocurrencies posted mixed moves as markets digested the economic data. Gold rebounded over 2% above $5,000 per ounce, while silver also gained amid safe-haven buying. By contrast, crypto remained volatile: Bitcoin tested $66,000, reflecting investor caution after strong jobs figures tempered expectations for immediate Fed easing. Overall, softer inflation supported bullion, while risk assets such as crypto remained range-bound amid uncertainty over economic growth and monetary policy.</p>
+    `
   }
 	// {
 	//   id: "cb8a7fe1",
