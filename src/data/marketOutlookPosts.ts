@@ -469,9 +469,9 @@ export const outlookPosts: OutlookPost[] = [
     content: `
         <table style="border-collapse:collapse;width:100%;text-align:center;font-family:Arial,sans-serif;">
             <tr>
-                <td style="padding:8px 16px;border:none;font-size:14px;">SPY +0.15%</td>
-                <td style="padding:8px 16px;border:none;font-size:14px;">QQQ -1.52%</td>
-                <td style="padding:8px 16px;border:none;font-size:14px;">IWM +2.54%</td>
+                <td style="padding:8px 16px;border:none;font-size:14px;">SPY -1.12%</td>
+                <td style="padding:8px 16px;border:none;font-size:14px;">QQQ -0.95%</td>
+                <td style="padding:8px 16px;border:none;font-size:14px;">IWM -0.66%</td>
             </tr>
         </table>
         <h3>U.S. Economic Data and Fed Expectations</h3>
