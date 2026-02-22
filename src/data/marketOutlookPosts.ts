@@ -464,7 +464,7 @@ export const outlookPosts: OutlookPost[] = [
         "Singh , M., & Shankar, S. (n.d.). From software to real estate, U.S. sectors under the grip of AI Scare Trade | reuters. Reuters. https://www.reuters.com/business/software-real-estate-us-sectors-under-grip-ai-scare-trade-2026-02-13/",
         "Szymanski, A. (2026, February 13). Morning bid: Dancing in the dark | reuters. Reuters. https://www.reuters.com/business/finance/global-markets-view-usa-2026-02-13/",
         "US jobs beat for January affirms Steady Fed View | reuters. Reuters. (2026a, February 11). https://www.reuters.com/business/view-us-jobs-beat-january-affirms-steady-fed-view-2026-02-11/",
-        "View cooling January inflation keeps fed easing in play | reuters. Reuters. (2026b, February 13). https://www.reuters.com/business/view-us-consumer-prices-rise-less-than-expected-january-2026-02-13/ "
+        "View cooling January inflation keeps fed easing in play | reuters. Reuters. (2026b, February 13). https://www.reuters.com/business/view-us-consumer-prices-rise-less-than-expected-january-2026-02-13/"
     ],
     content: `
         <table style="border-collapse:collapse;width:100%;text-align:center;font-family:Arial,sans-serif;">
@@ -485,6 +485,37 @@ export const outlookPosts: OutlookPost[] = [
 
 		<h3>Gold, Silver, and Crypto</h3>
 		<p>Precious metals and cryptocurrencies posted mixed moves as markets digested the economic data. Gold rebounded over 2% above $5,000 per ounce, while silver also gained amid safe-haven buying. By contrast, crypto remained volatile: Bitcoin tested $66,000, reflecting investor caution after strong jobs figures tempered expectations for immediate Fed easing. Overall, softer inflation supported bullion, while risk assets such as crypto remained range-bound amid uncertainty over economic growth and monetary policy.</p>
+    `
+  },{
+    id: "19c82bcf",
+    title: "Market Recap | Week of February 16, 2026",
+    excerpt: "US equity markets posted solid gains this week, supported by a U.S. Supreme Court ruling that reduced trade-policy uncertainty and by continued strength in select sectors. Gains were tempered by rising geopolitical tensions in the Middle East and mixed economic data, which kept investors cautious.",
+    date: "February 21, 2026",
+    category: "Weekly Market Recap",
+    readTime: "1 min read",
+    sources: [
+		"Google. (n.d.). SPDR S&P 500 ETF Trust (spy) price & news. Google Finance. https://www.google.com/finance/quote/SPY:NYSEARCA?window=5D",
+		"Google. (n.d.-a). Invesco QQQ Trust, series 1 (QQQ) Price & News. Google Finance. https://www.google.com/finance/quote/QQQ:NASDAQ?window=5D",
+		"Google. (n.d.-b). IShares russell 2000 ETF (IWM) price & news. Google Finance. https://www.google.com/finance/quote/IWM:NYSEARCA?window=5D",
+		"FedWatch. CME Group. (n.d.). https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html",
+		"Cavale, S. (2026, February 18). Oil closes at six-month high on US-Iran conflict worries | reuters. Reuters. https://www.reuters.com/business/energy/oil-prices-dip-investors-assess-trajectory-us-iran-tensions-2026-02-19/",
+		"Culp, S. (2026, February 18). Wall st ends lower on mixed economic data, US-Iran tensions boost crude | reuters. Reuters. https://www.reuters.com/world/china/global-markets-global-markets-2026-02-19/",
+		"Stocks jump after US Supreme Court rejects Trump’s tariffs by Reuters. Investing.com. (2026, February 20). https://www.investing.com/news/economic-indicators/stocks-jump-after-us-supreme-court-rejects-trumps-tariffs-4516664"
+    ],
+    content: `
+    <table style="border-collapse:collapse;width:100%;text-align:center;font-family:Arial,sans-serif;">
+		<tr>
+			<td style="padding:8px 16px;border:none;font-size:14px;">SPY +1.14%</td>
+			<td style="padding:8px 16px;border:none;font-size:14px;">QQQ +1.41%</td>
+			<td style="padding:8px 16px;border:none;font-size:14px;">IWM +1.53%</td>
+		</tr>
+	</table>
+	<h3>Tariff ruling reduces trade-policy uncertainty</h3>
+	<p>This week, the U.S. Supreme Court struck down former President Donald Trump’s broad tariffs imposed under emergency-powers law, ruling that the executive branch exceeded its authority. Equity markets in the U.S. and Europe reacted positively, with the S&P 500 and Nasdaq rising as investors welcomed the removal of a major trade-policy overhang. Treasury yields edged higher and the U.S. dollar softened as markets reassessed the implications for corporate costs and global trade flows.</p>
+	<h3>Geopolitical risk lifts oil prices</h3>
+	<p>Escalating tensions between the United States and Iran pushed crude oil prices to multi-month highs, with Brent and West Texas Intermediate rising as traders priced in higher geopolitical risk and the possibility of disruptions to key supply routes such as the Strait of Hormuz. Higher energy prices added to inflation concerns and weighed on broader risk sentiment, even as equities found support from other developments during the week.
+	<h3>Economic data clouds rate outlook</h3>
+	<p>Markets also digested economic data pointing to slower growth alongside persistent inflation, complicating expectations for future Federal Reserve policy. Weaker-than-expected GDP data combined with ongoing price pressures led investors to reassess the timing and pace of potential rate cuts. Overall market activity was quieter than usual, as participants largely held positions ahead of clearer signals from upcoming economic releases and central bank guidance.</p>
     `
   }
 	// {
