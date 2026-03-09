@@ -517,6 +517,47 @@ export const outlookPosts: OutlookPost[] = [
 	<h3>Economic data clouds rate outlook</h3>
 	<p>Markets also digested economic data pointing to slower growth alongside persistent inflation, complicating expectations for future Federal Reserve policy. Weaker-than-expected GDP data combined with ongoing price pressures led investors to reassess the timing and pace of potential rate cuts. Overall market activity was quieter than usual, as participants largely held positions ahead of clearer signals from upcoming economic releases and central bank guidance.</p>
     `
+  },
+  {
+    id: "19cd0924",
+    title: "Market Recap | Week of March 2, 2026",
+    excerpt: "This week, U.S. and global markets navigated a mix of labor market weakness, rising oil prices amid geopolitical tensions, and renewed investor interest in AI infrastructure stocks.",
+    date: "March 8, 2026",
+    category: "Weekly Market Recap",
+    readTime: "2 min read",
+	sources:[
+		"Google. (n.d.). SPDR S&P 500 ETF Trust (spy) price & news. Google Finance. https://www.google.com/finance/quote/SPY:NYSEARCA?window=5D",
+"Google. (n.d.-a). Invesco QQQ Trust, series 1 (QQQ) Price & News. Google Finance. https://www.google.com/finance/quote/QQQ:NASDAQ?window=5D",
+"Google. (n.d.-b). IShares russell 2000 ETF (IWM) price & news. Google Finance. https://www.google.com/finance/quote/IWM:NYSEARCA?window=5D",
+"FedWatch. CME Group. (n.d.). https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html",
+"Azhari , T., & Rashad, M. (2026, March 7). Iran war threatens prolonged hit to global energy markets | Reuters. Reuters. https://www.reuters.com/business/energy/iran-war-threatens-prolonged-hit-global-energy-markets-2026-03-07/",
+"Mccartney, G. (2026, March 4). Oil settles up around 5% on supply concerns as Iran conflict widens | reuters. Reuters. https://www.reuters.com/business/energy/oil-prices-rise-iran-conflict-widens-2026-03-05/",
+"Mutikani, L. (2026, March 6). Unexpected job losses, rise in unemployment rate fan us labor market doubts | Reuters. Reuters. https://www.reuters.com/world/us/us-nonfarm-payrolls-decline-february-unemployment-rate-rises-44-2026-03-06/",
+"Vertiv, lumentum, coherent, Echostar set to join S&P 500 | reuters. Reuters. (2026, March 6). https://www.reuters.com/business/media-telecom/vertiv-lumentum-coherent-echostar-set-join-sp-500-2026-03-06/"
+	],
+    content: `
+		<table style="border-collapse:collapse;width:100%;text-align:center;font-family:Arial,sans-serif;">
+			<tr>
+				<td style="padding:8px 16px;border:none;font-size:14px;">SPY -0.93%</td>
+				<td style="padding:8px 16px;border:none;font-size:14px;">QQQ +0.15%</td>
+				<td style="padding:8px 16px;border:none;font-size:14px;">IWM -2.74%</td>
+			</tr>
+		</table>
+
+      	<h3>U.S. Jobs Report Signals Labor Market Weakness</h3>
+		<p>In February, the U.S. economy unexpectedly lost 92,000 jobs, marking the second-largest monthly decline since January 2025, while the unemployment rate rose to 4.4% from 4.3% (Reuters). Employment fell across nearly all sectors, with the largest declines in healthcare, construction, and leisure & hospitality, partly due to a strike by healthcare workers and winter weather disruptions. The report challenges the Federal Reserve’s narrative that the labor market is stabilizing, raising uncertainty around future interest rate decisions amid broader economic volatility.<p>
+
+		<h3>Oil Prices Surge Amid Middle East Tensions</h3>
+		<p>Energy markets saw a strong rally this week, with crude oil climbing above $90 per barrel as geopolitical tensions in the Middle East heightened concerns about global supply. The conflict between the U.S., Israel, and Iran has already disrupted roughly one-fifth of global crude and natural gas output, with attacks on shipping near the Strait of Hormuz, a key oil transit route, driving prices higher (Reuters).</p>
+		<p>Analysts warn that infrastructure damage and halted shipments could keep fuel costs elevated for weeks or months, even if the conflict ends quickly. Higher energy prices have also increased market volatility, pressuring sectors sensitive to input costs, such as transportation, manufacturing, and consumer discretionary, while prompting a rotation toward defensive sectors.</p>
+
+		<h3>AI and Tech Infrastructure Drive Market Attention</h3>
+
+		<p>Investor focus also turned to artificial intelligence and technology infrastructure companies, following announcements that several AI-related firms would join the S&P 500 index. Vertiv, Lumentum, and Coherent are among the new additions, reflecting the growing importance of AI infrastructure in the U.S. economy.</p>
+		<p>These companies are critical enablers of AI computing. Vertiv provides data center infrastructure and power systems, while Lumentum and Coherent produce optical and photonic technologies used for high-speed data transmission, supporting the rapid expansion of AI workloads.</p>
+		<p>The index changes also underscore a shift in market leadership toward firms building the backbone of AI technology, rather than only consumer-facing applications. As global demand for AI computing power grows, companies involved in data centers, networking hardware, and semiconductors are becoming increasingly central to the technology landscape.</p>
+
+    `
   }
 	// {
 	//   id: "cb8a7fe1",

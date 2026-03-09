@@ -45,6 +45,9 @@ const questions = [
   { key: 'date', prompt: 'Date (e.g., "January 12, 2026"): ' },
   { key: 'category', prompt: 'Category (Quarterly Review/Strategy/Sector Analysis): ' },
   { key: 'readTime', prompt: 'Read Time (e.g., "12 min read"): ' },
+  { key: 'spyChange', prompt: 'SPY Change: ' },
+  { key: 'qqqChange', prompt: 'QQQ Change: ' },
+  { key: 'iwmChange', prompt: 'IWM Change: ' }
 ];
 
 const answers = {};
@@ -76,17 +79,15 @@ function generatePost() {
     date: "${answers.date}",
     category: "${answers.category}",
     readTime: "${answers.readTime}",
+    sources: [],
     content: \`
-      <h3>Section Title</h3>
-      <p>Your content goes here...</p>
-
-      <h3>Another Section</h3>
-      <p>More content...</p>
-      
-      <ul>
-        <li>Bullet point 1</li>
-        <li>Bullet point 2</li>
-      </ul>
+      <table style="border-collapse:collapse;width:100%;text-align:center;font-family:Arial,sans-serif;">
+        <tr>
+          <td style="padding:8px 16px;border:none;font-size:14px;">SPY ${answers.spyChange}</td>
+          <td style="padding:8px 16px;border:none;font-size:14px;">QQQ ${answers.qqqChange}</td>
+          <td style="padding:8px 16px;border:none;font-size:14px;">IWM ${answers.iwmChange}</td>
+        </tr>
+	    </table>
     \`
   }`;
 
@@ -94,9 +95,6 @@ function generatePost() {
   console.log('📋 Copy the following code and add it to src/data/marketOutlookPosts.ts:\n');
   console.log('─'.repeat(80));
   console.log(postTemplate);
-  console.log('─'.repeat(80));
-  console.log(`\n🔗 URL will be: /market-outlook/${slug}-${postId}\n`);
-  console.log(`📝 Post ID: ${postId} (short 8-character hash)\n`);
   
   rl.close();
 }
