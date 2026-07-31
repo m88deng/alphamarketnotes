@@ -13,8 +13,13 @@ export function generatePostUrl(id: string | number, title: string): string {
   return `/market-outlook/${slug}-${id}`;
 }
 
+// Generate URL of style: /news/{slug}-{id}
+export function generateNewsPostUrl(id: string | number, title: string): string {
+  const slug = slugify(title);
+  return `/news/${slug}-${id}`;
+}
+
 export function extractIdFromSlug(slugWithId: string): string {
   const parts = slugWithId.split('-');
   return parts[parts.length - 1];
 }
-

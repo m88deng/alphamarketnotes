@@ -26,6 +26,9 @@ export function Navigation() {
             <NavLink to="/market-outlook" className={({ isActive }) => linkClasses(isActive)}>
               Market Outlook
             </NavLink>
+            <NavLink to="/news" className={({ isActive }) => linkClasses(isActive)}>
+              News
+            </NavLink>
             <NavLink to="/about" className={({ isActive }) => linkClasses(isActive)}>
               About Me
             </NavLink>

@@ -2,6 +2,7 @@
 export { 
   slugify, 
   generatePostUrl, 
+  generateNewsPostUrl,
   extractIdFromSlug 
 } from './slugify';
 
@@ -9,4 +10,3 @@ export {
 export { 
   generatePostId
 } from './generatePostId';
-

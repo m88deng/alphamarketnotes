@@ -1,5 +1,15 @@
 # Scripts
 
+## Creating a New News Post
+
+To create a news post with an auto-generated ID, run:
+
+```bash
+npm run create-news-post
+```
+
+Copy the generated object into `src/data/newsPosts.ts`, then replace the example HTML in `content` with your article.
+
 ## Creating a New Market Outlook Post
 
 To create a new post with an auto-generated ID, run:
@@ -84,4 +94,3 @@ For example:
 ```
 
 This follows the same URL pattern as major news sites like MarketWatch!
-

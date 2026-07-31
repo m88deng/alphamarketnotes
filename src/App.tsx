@@ -3,6 +3,8 @@ import { Navigation } from './components/Navigation';
 import { HomePage } from './components/HomePage';
 import { MarketOutlookPage } from './components/MarketOutlookPage';
 import { MarketOutlookPostPage } from './components/MarketOutlookPostPage';
+import { NewsPage } from './components/NewsPage';
+import { NewsPostPage } from './components/NewsPostPage';
 import { AboutMePage } from './components/AboutMePage';
 import { ContactPage } from './components/ContactPage';
 import { Footer } from './components/Footer';
@@ -21,6 +23,8 @@ export default function App() {
           <Route path="/market-outlook/:slugWithId" element={<MarketOutlookPostPage />} />
           <Route path="/about" element={<AboutMePage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/news" element={<NewsPage />} /> 
+          <Route path="/news/:slugWithId" element={<NewsPostPage />} />
           {/* Optional: add a 404 page */}
           <Route path="*" element={<HomePage />} />
         </Routes>
