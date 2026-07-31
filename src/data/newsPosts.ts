@@ -30,9 +30,11 @@ export const newsPosts: NewsPost[] = [
 
 		<h3>What you learn</h3>
 		<p>You don't need to care about hedge funds to get the lessons here:</p>
-		<p>Being right isn't the same as surviving. A correct long-term call can still wipe you out if you're too leveraged to survive the short-term noise along the way.</p>
-		<p>Crowded trades unwind violently. When a lot of money piles into the same bet, a small move against it can cascade fast, because everyone's forced to sell at the same time.</p>
-		<p>Lenders don't wait for you to be proven right. Margin calls run on their own clock. Conviction doesn't pay off a loan.</p>
+		<ul>
+		<li><strong>Being right isn't the same as surviving.</strong> A correct long-term call can still wipe you out if you're too leveraged to survive the short-term noise along the way.</li>
+		<li><strong>Crowded trades unwind violently.</strong> When a lot of money piles into the same bet, a small move against it can cascade fast, because everyone's forced to sell at the same time.</li>
+		<li><strong>Lenders don't wait for you to be proven right.</strong> Margin calls run on their own clock. Conviction doesn't pay off a loan.</li>
+		</ul>
 		<p>Situational Awareness isn't the first fund to learn this the hard way, and it won't be the last. But it's a strikingly clean example, precisely because the underlying thesis held up—it was the leverage, not the idea, that broke.</p>
 		<p>Note: details of this story are still emerging based on reporting from outlets including CNBC, Bloomberg, and the Financial Times; some specifics may be updated as more information comes out.</p>
     `

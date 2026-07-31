@@ -70,7 +70,7 @@ export function NewsPostPage() {
       </article>
 
       {/* Related Posts Section */}
-      <section className={layout.section.default}>
+      {/* <section className={layout.section.default}>
         <div className="max-w-4xl mx-auto px-8" style={{paddingBottom:"8px"}}>
           <h3 className={typography.heading.h3 + ' mb-6'}>More from News</h3>
           <div className="grid gap-6">
@@ -99,7 +99,7 @@ export function NewsPostPage() {
               })}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
